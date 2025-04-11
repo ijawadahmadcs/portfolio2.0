@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="mypic.jpg">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+        <div class="menu">
+            <div class="name">
+                <h2><span>J</span>awad.<span></span></h2>
+             </div>
+             <ul class="options">
+              <li class="home"><h3><a href="portfolio.html" target="_blank">Home</a></h3></li>
+              <li class="about"><h3><a href="about.html">About</a></h3></li>
+              <li class="contact"><h3><a href="contact.html" target="_blank">Contact</a></h3></li>
+             </ul>
+            <div class="cv">
+                <button id="project"><a href="">See Projects</a></button>
+            </div>
+         </div>
+          </div>
+               <div class="content">
+                <div class="data">
+                 <h1>Hi, I'm Jawad Ahmad</h1>
+                 <h2 style="color: blue;">Frontend Developer</h2>
+                 <h4>Hi, I’m Jawad I’m a web developer with in-depth experience in UI/UX design. In a nutshell, I create websites that help organizations address business challenges and meet their needs.</h4><br>
+                 <button><a class="ab" href="#" target="_blank">CV</a></button>
+                 <button><a class="ab" href="" target="_blank">Resume</a></button>
+                 </div>
+                 <div class="picture">
+                 <div class="pic"></div>
+               </div>
+            </div>
+        </div>
+        <div class="icons">
+            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+            <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+        </div>
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+    // Typing effect for job title
+    const jobTitle = "Frontend Developer";
+    let index = 0;
+    function typeEffect() {
+        if (index < jobTitle.length) {
+            document.getElementById("job-title").textContent += jobTitle.charAt(index);
+            index++;
+            setTimeout(typeEffect, 150);
+        }
+    }
+    typeEffect();
+
+    // Smooth scrolling for menu links
+    document.querySelectorAll(".options a").forEach(anchor => {
+        anchor.addEventListener("click", function (event) {
+            if (this.getAttribute("href").startsWith("#")) {
+                event.preventDefault();
+                const targetId = this.getAttribute("href").substring(1);
+                const targetElement = document.getElementById(targetId);
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 50,
+                        behavior: "smooth"
+                    });
+                }
+            }
+        });
+    });
+
+    // Mobile menu toggle
+    const menu = document.querySelector(".options");
+    const menuButton = document.createElement("button");
+    menuButton.textContent = "☰";
+    menuButton.classList.add("menu-toggle");
+    document.querySelector(".menu").prepend(menuButton);
+    
+    menuButton.addEventListener("click", () => {
+        menu.classList.toggle("show");
+    });
+});
+        </script>
+      </body>
+</html>

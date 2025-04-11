@@ -1,0 +1,263 @@
+body {
+  background-color: aliceblue;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-size: 0.8rem;
+}
+.menu{
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+.name{
+    width: 15%;
+    text-align: center;
+    color: black;
+    font-size: larger;
+    font-weight: bolder;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.name span{
+    width: 15%;
+    text-align: center;
+    color: blue;
+    font-size: larger;
+    align-items: center;
+    justify-content: center;
+
+}
+ul{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 40%;
+    list-style: none;
+}
+.cv{
+    width: 35%;
+    text-align: right;
+    margin-right: 50px;
+}
+button{
+    width: 100px;
+    height: 30px;
+    background-color: blue;
+    color: aliceblue;
+    border-radius: 20px;
+    border: none;
+}
+button:hover{
+    background-color: aliceblue;
+    color: black;
+    cursor: pointer;
+}
+.content{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+.data{
+    width: 30%;
+    height: 300px;
+    display: block;
+    justify-content: center;
+    align-items: center;
+}
+.picture{
+    width: 50%;
+    height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-left: 20px;
+}
+.pic{
+    height: 300px;
+    width: 300px;
+    border-radius: 50%;
+    border: 2px solid black;
+    background-image: url(mypic.jpg);
+    background-size: cover;
+}
+a{
+    color: black;
+    text-decoration: none;
+}
+.pic:hover{
+    border: 4px solid blue;
+}
+.spec{
+    background-color: aliceblue;
+    border: 2px solid blue;
+    color: black;
+}
+.icons{
+    display: flex;
+    justify-content: center;
+ }
+ .icons i{
+    margin: 10px;
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: blue;
+    color: aliceblue;
+ }
+ .icons i:hover{
+    background-color: aliceblue;
+    border: 1px solid black;
+    outline: 1px solid blue;
+    color: black;
+    cursor: pointer;
+ }
+ .ab{
+    color: white;
+ }
+
+ @media screen and (max-width:600px) {
+     .content{
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    .picture{
+        width: 400px;
+        height: 400px;
+        justify-content: center;
+        align-items: center;
+    }
+    .name{
+        visibility: none;
+        display: none;
+    }
+    .options{
+        width: 75%;
+        font-size: 0.8rem;
+    }
+    .data{
+        width: 70%;
+    }
+ }
+ 
+ @media screen and (max-width:412px) {
+    .options{
+        width: 80%;
+        font-size: 0.6em;
+    }
+    button{
+        width: 60px;
+        height: 20px;
+        background-color: blue;
+        color: aliceblue;
+        border-radius: 20px;
+        border: none;
+        font-size: 0.4rem;
+   }
+    .cv{
+        width: 20%;
+    }
+    .picture{
+        width: 400px;
+        height: 400px;
+        padding: 0px;
+           }
+ }
+/* Responsive Design Enhancements */
+@media screen and (max-width: 768px) {
+    .menu {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 10px;
+    }
+
+    .name {
+        width: 100%;
+        text-align: left;
+        margin-bottom: 10px;
+    }
+
+    ul.options {
+        width: 100%;
+        justify-content: space-around;
+        font-size: 0.9rem;
+    }
+
+    .cv {
+        width: 100%;
+        text-align: center;
+        margin-top: 10px;
+    }
+
+    .content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .data {
+        width: 90%;
+        margin-bottom: 20px;
+    }
+
+    .picture {
+        width: 90%;
+    }
+
+    .pic {
+        width: 200px;
+        height: 200px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    ul.options {
+        flex-direction:row;
+        justify-content: space-evenly;
+        align-items: center;
+        font-size: 0.8rem;
+    }
+
+    ul.options li {
+        margin-bottom: 10px;
+    }
+
+    button {
+        width: 80px;
+        height: 25px;
+        font-size: 0.6rem;
+    }
+
+    .cv {
+        margin-right: 0;
+        margin-top: 10px;
+    }
+
+    .icons {
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .icons i {
+        margin: 5px;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    h1, h2, h4 {
+        font-size: 1rem;
+    }
+
+    .pic {
+        width: 150px;
+        height: 150px;
+    }
+
+    .cv button {
+        width: 70px;
+        height: 20px;
+        font-size: 0.5rem;
+    }
+}
